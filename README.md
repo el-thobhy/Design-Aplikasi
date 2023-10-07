@@ -1,4 +1,6 @@
 # Design-Aplikasi
+by Auriwan Yasper
+
 ## Feature yg diminta
 1.	Data yang ditampilkan adalah data dummy.
 2.	Tab package yang disediakan minimal 2 seperti gambar diatas dengan ketentuan masing-masing tab memiliki data yang dapat ditampilkan
