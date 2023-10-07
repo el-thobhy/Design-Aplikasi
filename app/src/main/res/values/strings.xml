@@ -11,4 +11,7 @@
     <string name="rp_30_000">Rp 30.000</string>
     <string name="_15_gb">15 GB</string>
     <string name="_30_hari">30 Hari</string>
+    <string name="internet">Internet</string>
+    <string name="roaming">Roaming</string>
+    <string name="choose_package">Choose Your Package</string>
 </resources>
