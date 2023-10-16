@@ -11,6 +11,7 @@ import com.elthobhy.designaplikasi.adapter.TopRekomendasiAdapter
 import com.elthobhy.designaplikasi.data.Paket
 import com.elthobhy.designaplikasi.databinding.FragmentInternetBinding
 import com.elthobhy.designaplikasi.databinding.FragmentShopBinding
+import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 
 class InternetFragment : Fragment(),TopRekomendasiAdapter.OnItemClickListener{
 
@@ -23,7 +24,7 @@ class InternetFragment : Fragment(),TopRekomendasiAdapter.OnItemClickListener{
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentInternetBinding.inflate(inflater, container, false)
         return binding.root
@@ -37,6 +38,13 @@ class InternetFragment : Fragment(),TopRekomendasiAdapter.OnItemClickListener{
             setHasFixedSize(true)
             adapter = adapterShop
         }
+        addData(list)
+
+        adapterShop.setData(list)
+    }
+
+    private fun addData(list: MutableList<Paket>) {
+
         val rekomendasi1 = Paket("Paket PROMO Combo Special", 30000, 1, 30, 15)
         val rekomendasi2 = Paket("Paket Promo Internet dan Telpon", 15000, 2, 7, 5)
         val rekomendasi3 = Paket("Combo Sakti Spesial", 25000, 3, 30, 5)
@@ -51,8 +59,6 @@ class InternetFragment : Fragment(),TopRekomendasiAdapter.OnItemClickListener{
         list.add(rekomendasi5)
         list.add(rekomendasi6)
         list.add(rekomendasi7)
-
-        adapterShop.setData(list)
     }
 
     override fun onItemClicked(v: View, position: Int) {

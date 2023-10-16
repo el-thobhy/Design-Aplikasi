@@ -3,32 +3,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.ShopFragment">
+    tools:context=".ui.MainInternetFragment">
 
-    <TextView
-        android:id="@+id/tv_chose"
-        app:layout_constraintStart_toStartOf="parent"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/choose_package"
-        android:padding="16dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_width="match_parent"
+        android:text="@string/filter"
+        android:padding="8dp"
+        android:drawableStart="@drawable/filter"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/button_bg"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
-        android:layout_width="match_parent"
-        app:elevation="0dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:tabMode="scrollable"
+        android:layout_marginTop="16dp"
+        app:tabBackground="@drawable/tab_selector_inset"
         android:background="@color/white"
+        app:tabTextColor="@android:color/darker_gray"
+        app:tabSelectedTextAppearance="@font/poppins_bold"
+        app:tabIndicator="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_chose"
-        app:tabSelectedTextColor="#113440" />
+        app:layout_constraintStart_toEndOf="@id/button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabSelectedTextColor="#072351" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"

@@ -30,8 +30,6 @@ class ShopFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentShopBinding.inflate(inflater, container, false)
-        viewPagerAdapter = ViewPagerAdapter(requireActivity(), lifecycle)
-        binding.viewPager.adapter = viewPagerAdapter
         return binding.root
     }
 
@@ -42,12 +40,15 @@ class ShopFragment : Fragment() {
             R.string.roaming,
         )
 
+        viewPagerAdapter = ViewPagerAdapter(requireActivity(), lifecycle)
+        binding.viewPager.adapter = viewPagerAdapter
+
         val tabLayout = binding.tabLayout
         TabLayoutMediator(tabLayout, binding.viewPager) { tab, position ->
             tab.text = context?.resources?.getString(tabTitle[position])
         }.attach()
-
-
+        tabLayout.getTabAt(0)?.setIcon(R.drawable.network)
+        tabLayout.getTabAt(1)?.setIcon(R.drawable.roaming)
 
     }
 
