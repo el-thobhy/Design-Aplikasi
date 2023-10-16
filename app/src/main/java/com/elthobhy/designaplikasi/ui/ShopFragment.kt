@@ -49,7 +49,7 @@ class ShopFragment : Fragment() {
         }.attach()
         tabLayout.getTabAt(0)?.setIcon(R.drawable.network)
         tabLayout.getTabAt(1)?.setIcon(R.drawable.roaming)
-
+        binding.viewPager.isUserInputEnabled = false
     }
 
 }
