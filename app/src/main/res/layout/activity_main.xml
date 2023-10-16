@@ -26,6 +26,7 @@
         android:background="@color/white"
         app:labelVisibilityMode="labeled"
         app:itemIconSize="16dp"
+        app:itemActiveIndicatorStyle="@android:color/transparent"
         app:itemIconTint="@drawable/bottom_nav_selector"
         app:itemTextColor="@drawable/bottom_nav_selector"
         app:layout_constraintBottom_toBottomOf="parent"
